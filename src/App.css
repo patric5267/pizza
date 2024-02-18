@@ -1,0 +1,77 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Instrument Sans", sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color:navajowhite;
+  /* color: #ff9f0d; */
+}
+.inner{
+  transition: all 1s;
+
+}
+.about1 h2{
+  white-space: nowrap;
+}
+.item1{
+  overflow: hidden;
+}
+.item1 .pizzaname{
+   text-decoration: none;
+    
+}
+.inner::after{
+   content: "";
+   position: absolute;
+   height: 2px;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   z-index: -1;
+   background-color: slategray;
+   box-shadow: 0 0 5px currentColor;
+}
+.menu{
+  transition: all 1s;
+}
+
+.text{
+  word-break: break-all;
+}
+.pizza{
+  animation-name: rollpizza;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  filter: drop-shadow(0 0 10px #ff9f0d);
+}
+.list{
+  position: relative;
+  cursor: pointer;
+}
+.list:hover::before{
+  width: 100%;
+}
+.list::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: white;
+  width: 0;
+  transition: all 0.5s;
+}
+@keyframes rollpizza {
+    from{
+      transform: translateY(0px);
+    }
+    from{
+      transform: translateY(-10px);
+    }
+}
