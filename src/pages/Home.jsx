@@ -43,6 +43,7 @@ const Home = () => {
     })
 
   }, [])
+  
   return (
     <>
       <div className="navbar sticky sm:fixed top-0 w-full  text-white xl:flex xl:justify-center">
@@ -65,7 +66,7 @@ const Home = () => {
       <div id="home" style={{scrollMarginTop:"5rem"}} className="section text-white xl:flex xl:justify-center">
         <div className='   xl:w-[70rem] sm:h-[100svh]  px-3 lg:px-16 xl:px-0   flex sm:items-center flex-col sm:flex-row sm:gap-5 lg:gap-7'>
           <div className='w-full mt-4 sm:mt-0 '>
-            <h1 className=' text-5xl lg:text-6xl text-black'>Supreme Pizza</h1>
+            <h1 className='supreme text-6xl text-black'>Supreme Pizza</h1>
             <p className='text my-3  text-black lg:my-4 lg:text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur dolorum voluptas itaque nisi? Recusandae, reiciendis. Dolores ex quia fugiat reiciendis</p>
             <div className="btns flex gap-3 items-center lg:text-lg ">
               <button className='text-lg flex items-center gap-1 rounded bg-[#212121] px-3 py-2'>Explore Menu <MdArrowForwardIos /></button>
@@ -84,11 +85,11 @@ const Home = () => {
             {
               arr.map((pizza, index) => <div key={index} className=" w-full my-3 py-3 px-4 flex flex-col items-center item1 border-2 border-solid border-white">
                 <img src={pizza.img} alt="" className='w-full' />
-                <abbr title={pizza.name} className='pizzaname text-black my-2 font-semibold text-2xl'>{pizza.name.length < 14 ? pizza.name : `${pizza.name.slice(0, 14)}...`}</abbr>
+                <abbr title={pizza.name} className='pizzaname text-black my-2 font-semibold text-2xl'>{pizza.name.length < 14 ? pizza.name : `${pizza.name.slice(0, 12)}...`}</abbr>
                 <p className='text text-center text-black'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, voluptas. Vel porro sunt distinctio voluptatum expedita magnam reprehenderit dolore aspernatur?</p>
-                <div className="btns flex gap-2 my-3 md:flex-col text-white">
-                  <button className='text-lg  bg-[#212121] px-5 py-2 rounded'>Add to cart</button>
-                  <button className='text-lg  bg-[#ff9f0d] px-5 py-2 rounded'>Order Now</button>
+                <div className="btns1 flex gap-2 my-3 md:flex-col text-white">
+                  <button className='  bg-[#212121] px-5 py-2 rounded'>Add to cart</button>
+                  <button className='  bg-[#ff9f0d] px-5 py-2 rounded'>Order Now</button>
                 </div>
               </div>)
             }
