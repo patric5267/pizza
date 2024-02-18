@@ -62,14 +62,14 @@ const Home = () => {
           <MdOutlineMenu className=' md:hidden' onClick={() => setShow("0")} />
         </div>
       </div>
-      <div id="home" className="section text-white xl:flex xl:justify-center">
+      <div id="home" style={{scrollMarginTop:"5rem"}} className="section text-white xl:flex xl:justify-center">
         <div className='   xl:w-[70rem] sm:h-[100svh]  px-3 lg:px-16 xl:px-0   flex sm:items-center flex-col sm:flex-row sm:gap-5 lg:gap-7'>
           <div className='w-full mt-4 sm:mt-0 '>
             <h1 className=' text-5xl lg:text-6xl text-black'>Supreme Pizza</h1>
             <p className='text my-3  text-black lg:my-4 lg:text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur dolorum voluptas itaque nisi? Recusandae, reiciendis. Dolores ex quia fugiat reiciendis</p>
             <div className="btns flex gap-3 items-center lg:text-lg ">
-              <button className='flex items-center gap-1 rounded bg-[#212121] px-3 py-2'>Explore Menu <MdArrowForwardIos /></button>
-              <button className='flex items-center gap-1 rounded font-semibold text-white bg-[#ff9f0d] px-3 py-2'>Order Now</button>
+              <button className='text-lg flex items-center gap-1 rounded bg-[#212121] px-3 py-2'>Explore Menu <MdArrowForwardIos /></button>
+              <button className='text-lg flex items-center gap-1 rounded font-semibold text-white bg-[#ff9f0d] px-3 py-2'>Order Now</button>
             </div>
           </div>
           <div className='relative z-[-1]   pizza  w-full my-6 sm:my-0'>
@@ -87,8 +87,8 @@ const Home = () => {
                 <abbr title={pizza.name} className='pizzaname text-black my-2 font-semibold text-2xl'>{pizza.name.length < 14 ? pizza.name : `${pizza.name.slice(0, 14)}...`}</abbr>
                 <p className='text text-center text-black'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, voluptas. Vel porro sunt distinctio voluptatum expedita magnam reprehenderit dolore aspernatur?</p>
                 <div className="btns flex gap-2 my-3 md:flex-col text-white">
-                  <button className=' bg-[#212121] px-5 py-1 rounded'>Add to cart</button>
-                  <button className=' bg-[#ff9f0d] px-5 py-1 rounded'>Order Now</button>
+                  <button className='text-lg  bg-[#212121] px-5 py-2 rounded'>Add to cart</button>
+                  <button className='text-lg  bg-[#ff9f0d] px-5 py-2 rounded'>Order Now</button>
                 </div>
               </div>)
             }
@@ -98,23 +98,23 @@ const Home = () => {
           <button onClick={() => setId2(id2 + 10)} className=' bg-black text-white px-5 py-2 rounded'>Load More</button>
         </div>
       </div>
-      <div id="about" style={{scrollMarginTop:"2rem"}} className="aboutus xl:flex xl:justify-center">
+      <div id="about" style={window.innerWidth>=1281 ?{scrollMarginTop:"2rem"} : {scrollMarginTop:"5.5rem"}} className="aboutus xl:flex xl:justify-center">
         <div className=' my-4 lg:mt-16 xl:w-[70rem] px-3 lg:px-16 xl:px-0 flex flex-col items-center'>
           <h1 className=' text-2xl underline lg:text-4xl'>About Us</h1>
           <div className='mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4'>
-            <div className=" bg-slate-200 about1 flex flex-col items-center px-3 py-4">
+            <div className="rounded bg-slate-200 about1 flex flex-col items-center px-3 py-4">
               <img src={pizzalove} alt="" className=' w-full ' />
               <h2 className=' text-2xl font-semibold mt-2'>made with love</h2>
               <p className=' text-center my-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque eveniet illo, ut iusto suscipit vero, voluptatibus deserunt soluta nesciunt molestiae ex repudiandae ad voluptate? Itaque sapiente repudiandae, perferendis fugiat deserunt sunt assumenda veritatis quisquam laudantium ipsa magni molestias labore numquam?</p>
               <button className=' rounded bg-[#ff9f0d] text-white px-5 py-2'>Our Menu</button>
             </div>
-            <div className=" bg-slate-200 about1 flex flex-col items-center px-3 py-4">
+            <div className="rounded bg-slate-200 about1 flex flex-col items-center px-3 py-4">
               <img src={pizzadelievery} alt="" className=' w-full ' />
               <h2 className=' text-2xl font-semibold mt-2'>30 minutes delievery</h2>
               <p className=' text-center my-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque eveniet illo, ut iusto suscipit vero, voluptatibus deserunt soluta nesciunt molestiae ex repudiandae ad voluptate? Itaque sapiente repudiandae, perferendis fugiat deserunt sunt assumenda veritatis quisquam laudantium ipsa magni molestias labore numquam?</p>
               <button className=' rounded bg-[#ff9f0d] text-white px-5 py-2'>Our Menu</button>
             </div>
-            <div className=" bg-slate-200 about1 flex flex-col items-center px-3 py-4">
+            <div className="rounded bg-slate-200 about1 flex flex-col items-center px-3 py-4">
               <img src={share} alt="" className=' w-full ' />
               <h2 className=' text-2xl font-semibold mt-2'>Share with friends</h2>
               <p className=' text-center my-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque eveniet illo, ut iusto suscipit vero, voluptatibus deserunt soluta nesciunt molestiae ex repudiandae ad voluptate? Itaque sapiente repudiandae, perferendis fugiat deserunt sunt assumenda veritatis quisquam laudantium ipsa magni molestias labore numquam?</p>
@@ -123,7 +123,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div id="contact" style={{scrollMarginTop:"2rem"}} className="contactus xl:flex xl:justify-center">
+      <div id="contact" style={window.innerWidth>=1281 ?{scrollMarginTop:"2rem"} : {scrollMarginTop:"5.5rem"}} className="contactus xl:flex xl:justify-center">
         <div className='  items-center my-4 lg:mt-16 xl:w-[70rem] px-3 lg:px-16 xl:px-0 overflow-hidden '>
           <h1 className=' text-2xl text-center underline lg:text-4xl '>Contact Us</h1>
           <div className='md:flex md:gap-3 mt-5 '>
@@ -133,13 +133,13 @@ const Home = () => {
             </div>
             <form action="" className='   md:w-[50%]'>
               <div className='flex gap-2'>
-                <input type="text" placeholder='Enter your firstname.. ' className=' w-[50%] outline-none text-lg  bg-[#f9f9f0] border-[1px] border-solid border-black rounded py-2 lg:py-4 pl-2' />
-                <input type="text" placeholder='Enter your firstname.. ' className='w-[50%] outline-none text-lg bg-[#f9f9f0] border-[1px] border-solid border-black rounded py-2 lg:py-4 pl-2' />
+                <input type="text" placeholder='Enter your firstname.. ' className=' w-[50%] outline-none  sm:text-lg  bg-[#f9f9f0] border-[1px] border-solid border-black rounded py-2 lg:py-4 pl-2' />
+                <input type="text" placeholder='Enter your Lastname.. ' className='w-[50%] outline-none  sm:text-lg bg-[#f9f9f0] border-[1px] border-solid border-black rounded py-2 lg:py-4 pl-2' />
               </div>
 
-              <input type="text" placeholder='Enter your address..' className='w-full  my-2 text-lg outline-none  bg-[#f9f9f0] border-[1px] border-solid border-black lg:py-4 rounded py-2 pl-2' />
-              <textarea placeholder='Enter your message' name="" id="" cols="30" rows="10" className='w-full text-lg  mt-2 outline-none  bg-[#f9f9f0] border-[1px] border-solid border-black rounded py-2 pl-2'></textarea>
-              <input type="submit" value="Submit" className='  bg-[#ff9f0d] text-white w-full py-2 rounded lg:text-xl lg:inline'/>
+              <input type="text" placeholder='Enter your address..' className='w-full  my-2 sm:text-lg outline-none  bg-[#f9f9f0] border-[1px] border-solid border-black lg:py-4 rounded py-2 pl-2' />
+              <textarea placeholder='Enter your message' name="" id="" cols="30" rows="10" className='w-full sm:text-lg   outline-none  bg-[#f9f9f0] border-[1px] border-solid border-black rounded py-2 pl-2'></textarea>
+              <input type="submit" value="Submit" className='  bg-[#ff9f0d] text-white w-full py-2 rounded lg:text-xl '/>
             </form>
           </div>
 

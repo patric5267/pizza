@@ -75,3 +75,8 @@ body{
       transform: translateY(-10px);
     }
 }
+@media screen and (width < 768px) {
+    body{
+      background-color: white;
+    }  
+}
